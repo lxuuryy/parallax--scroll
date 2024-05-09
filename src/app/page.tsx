@@ -55,15 +55,15 @@ export default function Home() {
   return (
     <main className="">
       <div className="h-[100vh]">
-        <div ref={ref} className="h-[100%] w-full bg-gradient-to-b from-slate-300 to-slate-800 flex items-center justify-center">
+        <div className="h-[100%] w-full bg-gradient-to-b from-slate-300 to-slate-800 flex items-center justify-center">
           <h1 className="text-5xl text-white ">Future of Modern website</h1>
         </div>
       </div>
-      <div className="h-[175vh] flex bg-slate-800 gap-[2vw] box-border overflow-hidden">
+      <div ref={ref}  className="h-[175vh] flex bg-slate-800 gap-[2vw] box-border overflow-hidden ">
         <Column images={[images[0], images[1], images[2]]} y={y} top={'-45%'} />
-        <Column images={[images[3], images[4], images[5]]} y={y2} top={'-95%'}/>
-        <Column images={[images[6], images[7], images[8]]} y={y3} top={'-45%'}/>
-        <Column images={[images[9], images[10], images[11]]} y={y4} top={'-95%'}/>
+        <Column images={[images[3], images[4], images[5]]} y={y2} top={'-100.5%'}/>
+        <Column images={[images[6], images[7], images[8]]} y={y3} top={'-45.5%'}/>
+        <Column images={[images[9], images[10], images[11]]} y={y4} top={'-100%'}/>
       </div>
       <div className="h-[100vh]">
         <div className="h-[100%] w-full bg-gradient-to-t from-slate-500 to-slate-800 flex items-center justify-center">
@@ -76,7 +76,7 @@ export default function Home() {
 
 const Column =({images, y, top} : ColumnProps) => {
   return (
-    <motion.div style={{y:y, top:top}} className="flex flex-col w-[25%] h-[100%] min-w-[50px] relative t ">
+    <motion.div style={{y:y, top:top}} className="flex flex-col w-[25%] h-[100%] min-w-[50px] relative  ">
       {images.map((image, index) => (
         <div key={index} className="relative w-full h-full my-2 ">
           <Image className="rounded-xl " src={image} layout="fill" alt={image} objectFit="cover"  />
